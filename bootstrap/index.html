@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uy Bekalari Uchun Retseptlar</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+
+    <style>
+        .hero {
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') center/cover;
+            height: 60vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .nav-link:hover{
+            transform: scale(1.15);
+            color: black;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;  
+        }
+        .card-img-top {
+            height: 220px;        
+            object-fit: cover;    
+        }
+        .toast-wrapper {
+    position: relative;
+}
+
+.hover-toast {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 10;
+}
+
+.toast-wrapper:hover .hover-toast {
+    opacity: 1;
+}
+
+.hover-image {
+    transition: 0.3s ease;
+}
+
+.toast-wrapper:hover .hover-image {
+    filter: brightness(70%);
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <div class="container">
+        <a class="navbar-brand bold fs-2" >RETSEPTLAR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" class="text-dark" href="index.html">Bosh sahifa</a></li>
+                <li class="nav-item"><a class="nav-link" class="text-dark" href="kategoriyalar.html">Kategoriyalar</a></li>
+                <li class="nav-item"><a class="nav-link" class="text-dark" href="retseptlar.html">Retseptlar</a></li>
+                <li class="nav-item"><a class="nav-link" class="text-dark" href="aloqa.html">Aloqa</a></li>
+            </ul>
+        </div>
+    </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+</nav>
+<div class="hero">
+    <h1>ENG MAZALI UY TAOMLARI</h1>
+</div>
+<section id="retseptlar" class="py-5 bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Eng yangi retseptlar</h2>
+
+        <div class="row justify-content-center">
+
+            <!-- taomlar retsepti -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm toast-wrapper">
+                    <div class="hover-toast bg-primary text-white px-2 py-1,5 rounded">Retsept ko`rishni bosing</div>
+                    <img src="rasmlar/palov.jpg"  class="card-img-top hover-image" alt="Palov">
+                    <div class="card-body">
+                        <h5 class="card-title">Osh Palov</h5>
+                        <p class="card-text">Mazali, xushbo`y va an`anaviy o`zbek palovi.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#palov">
+                            Retseptni ko`rish
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- shirinliklar retsepti -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm toast-wrapper">
+                    <div class="hover-toast bg-primary text-white px-2 py-1,5 rounded">Retsept ko`rishni bosing</div>
+                    <img src="rasmlar/sddefault.jpg" class="card-img-top hover-image" alt="Shirinlik">
+                    <div class="card-body">
+                        <h5 class="card-title">Medovik Tort</h5>
+                        <p class="card-text">Uy sharoitida tayyorlanadigan eng oson medovik.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Sezar">
+                            Retseptni ko`rish
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- salatlar retsepti -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm toast-wrapper">
+                    <div class="hover-toast bg-primary text-white px-2 py-1,5 rounded">Retsept ko`rishni bosing</div>
+                    <img src="rasmlar/sezar.jfif" class="card-img-top hover-image" alt="Salat" >
+                    <div class="card-body">
+                        <h5 class="card-title">Sezar Salat</h5>
+                        <p class="card-text">Yengil va juda mazali sezar salati retsepti.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Sezar">
+                            Retseptni ko`rish
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <!-- ichimliklar retsepti -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm toast-wrapper">
+                    <div class="hover-toast bg-primary text-white px-2 py-1,5 rounded">Retsept ko`rishni bosing</div>
+                    <img src="rasmlar/lavlagi.jfif" class="card-img-top hover-image" alt="Lavlagili ichimlik">
+                    <div class="card-body">
+                        <h5 class="card-title">Lavlagili ichimlik</h5>
+                        <p class="card-text"> Vitaminlarga boy, rang-barang va juda foydali lavlagili ichimlik retsepti.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Sezar">
+                            Retseptni ko`rish
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <!-- fastfood retsepti -->
+            <div class="col-md-4 mb-4 toast-wrapper">
+                <div class="card shadow-sm">
+                    <div class="hover-toast bg-primary text-white px-2 py-1,5 rounded">Retsept ko`rishni bosing</div>
+                    <img src="rasmlar/hotdog.jpg" class="card-img-top hover-image" alt="Shirinlik">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotdog</h5>
+                        <p class="card-text">Tez va mazali tayyor bo`ladigan fastfood retsepti.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Sezar">
+                            Retseptni ko`rish
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- modal osh uchun -->
+<div class="modal fade" id="palov" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="palov">Osh Palov</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ol type="1 " start="1">
+                            <li>1 kg guruch</li>
+                            <li>1 kg qo`y go`shti</li>
+                            <li>1 kg sabzi</li>
+                            <li>300 ml o`simlik moyi</li>
+                            <li>4 ta o`rtacha piyoz</li>
+                            <li>2 ta achchiq qalampir</li>
+                            <li>2 bosh sarimsoq</li>
+                            <li>1 osh qoshiq zira</li>
+                            <li>1 choy qoshiq kashnich urug`lari</li>
+                            <li>ta`bga ko`ra tuz.</li>
+                        </ol>
+      </div>
+      <div class="modal-footer">
+        <button id="likeBtn" class="btn btn-success position-relative me-2">
+          👍 
+          <span id="likeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">6</span>
+        </button>
+        <button id="dislikeBtn" class="btn btn-danger position-relative me-3">
+          👎 
+          <span id="dislikeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">0</span>
+        </button>
+
+       <a class="btn btn-primary" href="taom.html">Ko`proq</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal salat uchun -->
+<div class="modal fade" id="Sezar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="Sezar">Sezar Salat</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ol type="1 " start="1">
+                            <li>1 kg guruch</li>
+                            <li>1 kg qo`y go`shti</li>
+                            <li>1 kg sabzi</li>
+                            <li>300 ml o`simlik moyi</li>
+                            <li>4 ta o`rtacha piyoz</li>
+                            <li>2 ta achchiq qalampir</li>
+                            <li>2 bosh sarimsoq</li>
+                            <li>1 osh qoshiq zira</li>
+                            <li>1 choy qoshiq kashnich urug`lari</li>
+                            <li>ta`bga ko`ra tuz.</li>
+                        </ol>
+      </div>
+      <div class="modal-footer">
+        <button id="likeBtn" class="btn btn-success position-relative me-2">
+          👍 
+          <span id="likeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">6</span>
+        </button>
+        <button id="dislikeBtn" class="btn btn-danger position-relative me-3">
+          👎 
+          <span id="dislikeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">0</span>
+        </button>
+       <a class="btn btn-primary" href="salat.html">Ko`proq</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal shirinlik uchun -->
+<div class="modal fade" id="shirinlik" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="shirinlik">Medovik tort</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ol type="1 " start="1">
+                            <li>1 kg guruch</li>
+                            <li>1 kg qo`y go`shti</li>
+                            <li>1 kg sabzi</li>
+                            <li>300 ml o`simlik moyi</li>
+                            <li>4 ta o`rtacha piyoz</li>
+                            <li>2 ta achchiq qalampir</li>
+                            <li>2 bosh sarimsoq</li>
+                            <li>1 osh qoshiq zira</li>
+                            <li>1 choy qoshiq kashnich urug`lari</li>
+                            <li>ta`bga ko`ra tuz.</li>
+                        </ol>
+      </div>
+      <div class="modal-footer">
+        <button id="likeBtn" class="btn btn-success position-relative me-2">
+          👍 
+          <span id="likeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">6</span>
+        </button>
+        <button id="dislikeBtn" class="btn btn-danger position-relative me-3">
+          👎 
+          <span id="dislikeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">0</span>
+        </button>
+       <a class="btn btn-primary" href="shirinlik.html">Ko`proq</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal ichimlik uchun -->
+<div class="modal fade" id="ichimlik" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ichimlik">Lavlagili ichimlik</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ol type="1 " start="1">
+                            <li>1 kg guruch</li>
+                            <li>1 kg qo`y go`shti</li>
+                            <li>1 kg sabzi</li>
+                            <li>300 ml o`simlik moyi</li>
+                            <li>4 ta o`rtacha piyoz</li>
+                            <li>2 ta achchiq qalampir</li>
+                            <li>2 bosh sarimsoq</li>
+                            <li>1 osh qoshiq zira</li>
+                            <li>1 choy qoshiq kashnich urug`lari</li>
+                            <li>ta`bga ko`ra tuz.</li>
+                        </ol>
+      </div>
+      <div class="modal-footer">
+        <button id="likeBtn" class="btn btn-success position-relative me-2">
+          👍 
+          <span id="likeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">6</span>
+        </button>
+        <button id="dislikeBtn" class="btn btn-danger position-relative me-3">
+          👎 
+          <span id="dislikeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">0</span>
+        </button>
+       <a class="btn btn-primary" href="ichimlik.html">Ko`proq</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal fastfood uchun -->
+<div class="modal fade" id="fastfood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="fastfood">Hotdog retsepti</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ol type="1 " start="1">
+                            <li>1 kg guruch</li>
+                            <li>1 kg qo`y go`shti</li>
+                            <li>1 kg sabzi</li>
+                            <li>300 ml o`simlik moyi</li>
+                            <li>4 ta o`rtacha piyoz</li>
+                            <li>2 ta achchiq qalampir</li>
+                            <li>2 bosh sarimsoq</li>
+                            <li>1 osh qoshiq zira</li>
+                            <li>1 choy qoshiq kashnich urug`lari</li>
+                            <li>ta`bga ko`ra tuz.</li>
+                        </ol>
+      </div>
+      <div class="modal-footer">
+        <button id="likeBtn" class="btn btn-success position-relative me-2">
+          👍 
+          <span id="likeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">6</span>
+        </button>
+        <button id="dislikeBtn" class="btn btn-danger position-relative me-3">
+          👎 
+          <span id="dislikeCount" class="badge bg-light text-dark position-absolute top-0 start-100 translate-middle rounded-pill">0</span>
+        </button>
+       <a class="btn btn-primary" href="fastfood.html">Ko`proq</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="bg-success text-white text-center py-3">
+    <p>© 2025 Uy bekalari uchun retseptlar</p> 
+    <p>Barcha huquqlar himoyalangan.</p>
+</footer>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+let likeCount = 6;
+let dislikeCount = 0;
+
+document.getElementById("likeBtn").onclick = function () {
+    likeCount++;
+    document.getElementById("likeCount").textContent = likeCount;
+};
+
+document.getElementById("dislikeBtn").onclick = function () {
+    dislikeCount++;
+    document.getElementById("dislikeCount").textContent = dislikeCount;
+};</script>
+</body>
+</html>

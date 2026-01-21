@@ -1,0 +1,32 @@
+.sahifa{
+    background-color: lightgreen; 
+    height: 50px; 
+    align-items: center;
+
+    width: 100%;
+    border-bottom: 1px solid #ccc; /* Pastdan chiziq */
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    position: sticky;
+    top: 0;
+}
+.sahifa a{
+    font-size: 16px;
+ display: block;
+ color: white;
+ text-decoration: none;
+ width: 30px;
+justify-content: center;
+align-items: center;
+padding: 8px 15px;
+border-radius: 5px;
+transition: all 0.3s ease;
+font-weight: bold;
+margin: 0 15px;
+z-index: 1000;
+}
+.sahifa a:hover{
+    color: white;
+    transform: scale(1.1);
+}

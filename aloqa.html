@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloqa</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+    .nav-link:hover{
+            transform: scale(1.15);
+            color: black;
+    }
+    .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;  
+    }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <div class="container">
+        <a class="navbar-brand bold fs-2" >RETSEPTLAR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" class="text-dark" href="index.html">Bosh sahifa</a></li>
+                <li class="nav-item"><a class="nav-link" class="text-dark" href="kategoriyalar.html">Kategoriyalar</a></li>
+                <li class="nav-item"><a class="nav-link" class="text-dark" href="retseptlar.html">Retseptlar</a></li>
+                <li class="nav-item"><a class="nav-link" class="text-dark" href="aloqa.html">Aloqa</a></li>
+            </ul>
+        </div>
+    </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+</nav>
+    <div class="contact-container">
+        <h2>Biz bilan bog`laning</h2>
+
+        <form>
+            <div class="mb-3">
+            <label for="exampleFormControlText1" class="form-label">Ismingiz:</label>
+            <input type="text" id="exampleFormControlText1" name="text" class="form-control" placeholder="Ismingizni kiriting" required>
+            </div>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email manzilingiz:</label>
+            <input type="email" id="exampleFormControlInput1" class="form-control" placeholder="Email kiriting" required>
+            </div>
+            <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Xabar matni:</label>
+            <textarea id="exampleFormControlTextarea1" name="textarea" class="form-control" rows="4" placeholder="Xabaringizni yozing..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-50 text-center">Xabarni yuborish</button>
+        </form>
+    </div>
+
+    <footer class="text-center text-white bg-dark py-2 mt-5" >
+       <p class="mb-0">© 2025 Taom retseptlari — Aloqa sahifasi</p> 
+    </footer>
+<script src="js/bootstrap.bundle.js"></script>  
+</body>
+</html>
